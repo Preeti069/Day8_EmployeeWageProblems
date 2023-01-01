@@ -17,20 +17,22 @@ namespace Part3_EmployeeWagePro
             int empWage = 0;
             Random random = new Random();
             int empcheck = random.Next(0, 3);
-            if (empcheck == IS_FULL_TIME)
+            switch (empcheck)
             {
-                empHrs = 8;
-                Console.WriteLine("Employee is Present");
-            }
-            else if (empcheck == IS_PART_TIME)
-            {
-                empHrs = 4;
-                Console.WriteLine("EMployee is Part Time");
-            }
-            else
-            {
-                empHrs = 0;
-                Console.WriteLine("Employee is Absent");
+                case 1:
+                IS_FULL_TIME:
+                    empHrs = 8;
+                    Console.WriteLine("Employee  is Present");
+                    break;
+                case 2:
+                IS_PART_TIME:
+                    empHrs = 4;
+                    Console.WriteLine("EMployee is Part Time");
+                    break;
+                default:
+                    empHrs = 0;
+                    Console.WriteLine("Employee  is Absent");
+                    break;
             }
             empWage = EMP_RATE_PER_HR * empHrs;
             Console.WriteLine("Employee Daily Wage is : " + empWage);

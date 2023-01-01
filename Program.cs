@@ -6,10 +6,10 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Employee Wage Program\n");
-            EmployeeCheck Employee = new EmployeeCheck();
-          Employee.display();
+            //mployeeCheck Employee = new EmployeeCheck();
+            EmployeeCheck.display();
 
-           Console.ReadLine();
+            Console.ReadLine();
         }
         
     }
